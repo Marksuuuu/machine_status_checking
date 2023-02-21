@@ -41,7 +41,7 @@ class MainFunction:
 
     def __init__ (self,master):
 
-        self.start_button = ttk.Button(root,text='START',width=40,command = self.machine_started)
+        self.start_button = ttk.Button(root,text='START',width=40,command=lambda:[self.machine_started(), self.idle_function()])
         self.start_button.pack(expand=True)
         self.start_button.place(x=30,y=30,)
 
